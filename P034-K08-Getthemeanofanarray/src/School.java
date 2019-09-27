@@ -5,6 +5,6 @@ public class School {
             result += e;
         }
         return result / marks.length;
-        //  return (IntStream.of(marks).sum())/marks.length;
+        //
     }
 }
