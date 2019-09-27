@@ -25,6 +25,7 @@ public class Correct {
             }
         }
         return new String(chars);
+        // return string.replace("5","S").replace("0", "O").replace("1","I");
     }
 
     public static void main(String[] args) {
