@@ -7,6 +7,7 @@ public class Kata {
         } else {
             return "false";
         }
+        //  return b ? "true" : "false";
     }
 
     public static void main(String[] args) {
