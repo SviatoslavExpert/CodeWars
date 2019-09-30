@@ -1,5 +1,9 @@
 package com.granovskiy;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class Kata {
     public static String reverseWords(String str){
         String result = "";
@@ -9,6 +13,11 @@ public class Kata {
         }
         result = result.trim();
         return result;
+/*
+        List Words = Arrays.asList(str.split(" "));
+        Collections.reverse(Words);
+        return String.join(" ", Words);
+*/
     }
 
     public static void main(String[] args) {
