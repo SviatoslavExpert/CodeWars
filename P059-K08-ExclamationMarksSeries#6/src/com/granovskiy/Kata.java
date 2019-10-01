@@ -1,19 +1,25 @@
 package com.granovskiy;
 
+import java.util.Arrays;
+
 public class Kata {
-    private static String remove(String s, int n){
+    public static String remove(String s, int n){
+
         String result = "";
         int count = 0;
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == '!' && count <= n) {
-                result += s.replace("!", "");
+        int size = s.length();
+        StringBuilder builder = new StringBuilder(s);
+        for (int i = 0; i <= size; i++) {
+            if (builder.charAt(i) == '!' && count <= n) {
+                builder = builder.deleteCharAt(i);
                 count++;
+                //size--;
             }
         }
-        return result;
+        return String.valueOf(builder);
     }
 
     public static void main(String[] args) {
-        System.out.println(remove("Hi!", 100));
+        System.out.println(remove("Hi!!!", 100));
     }
 }
