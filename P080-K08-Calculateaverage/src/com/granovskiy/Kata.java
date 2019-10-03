@@ -7,5 +7,7 @@ public class Kata {
             result += e;
         }
         return result / array.length;
+        // return Arrays.stream(array).average().orElse(0);
+        // return stream(array).average().getAsDouble();
     }
 }
