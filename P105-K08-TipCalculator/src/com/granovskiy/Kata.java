@@ -2,12 +2,12 @@ package com.granovskiy;
 
 public class Kata {
     public static Integer calculateTip(double amount, String rating) {
-        String ratingString = rating.toLowerCase();
-        if (ratingString.equals("terrible")) return 0;
-        if (ratingString.equals("poor")) return (int) Math.round(amount * 0.05);
-        if (ratingString.equals("good")) return (int) Math.round(amount * 0.1);
-        if (ratingString.equals("great")) return (int) Math.round(amount * 0.15);
-        if (ratingString.equals("excellent"))  return (int) Math.round(amount * 0.2);
+        String s = rating.toLowerCase();
+        if (s.equals("terrible")) return 0;
+        if (s.equals("poor")) return (int) Math.ceil(amount * 0.05);
+        if (s.equals("good")) return (int) Math.ceil(amount * 0.1);
+        if (s.equals("great")) return (int) Math.ceil(amount * 0.15);
+        if (s.equals("excellent"))  return (int) Math.ceil(amount * 0.2);
         return null;
     }
 
