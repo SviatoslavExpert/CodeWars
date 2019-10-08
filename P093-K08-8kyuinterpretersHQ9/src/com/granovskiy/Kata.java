@@ -23,4 +23,10 @@ public class Kata {
         }
         return null;
     }
+
+    public static void main(String[] args) {
+        System.out.println(HQ9('H'));
+        System.out.println(HQ9('Q'));
+        System.out.println(HQ9('9'));
+    }
 }
