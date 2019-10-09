@@ -9,5 +9,6 @@ public class Kata {
             sum = sum + Integer.valueOf(s);
         }
         return sum;
+        //  return mixed.stream().mapToInt(o -> Integer.parseInt(o.toString())).sum();
     }
 }
