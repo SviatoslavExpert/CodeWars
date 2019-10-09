@@ -4,25 +4,24 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Kata {
-    private final static Double G = 6.67e-11;
-
     public static double solution(double[] arrVal, String[] arrUnit) {
-        Map<String, Double> convertions = new HashMap<>();
-        convertions.put("kg", 1.0);
-        convertions.put("g", 1e-3);
-        convertions.put("mg", 1e-6);
-        convertions.put("μg", 1e-9);
-        convertions.put("lb", 0.453592);
-        convertions.put("m", 1.0);
-        convertions.put("cm", 1e-2);
-        convertions.put("mm", 1e-3);
-        convertions.put("μm", 1e-6);
-        convertions.put("ft", 0.3048);
+        java.util.HashMap<String, Double> unitCalculator = new java.util.HashMap<>();
 
-        double m1 = arrVal[0] * convertions.get(arrUnit[0]);
-        double m2 = arrVal[1] * convertions.get(arrUnit[1]);
-        double r = arrVal[2] * convertions.get(arrUnit[2]);
+        unitCalculator.put("kg", 1.);
+        unitCalculator.put("g", .001);
+        unitCalculator.put("mg", .000001);
+        unitCalculator.put("μg", .000000001);
+        unitCalculator.put("lb", 0.453592);
+        unitCalculator.put("m", 1.);
+        unitCalculator.put("cm", .01);
+        unitCalculator.put("mm", .001);
+        unitCalculator.put("μm", .000001);
+        unitCalculator.put("ft", 0.3048);
 
-        return G * m1 * m2 / r / r;
+        double m1 = arrVal[0] * unitCalculator.get(arrUnit[0]);
+        double m2 = arrVal[1] * unitCalculator.get(arrUnit[1]);
+        double r = arrVal[2] * unitCalculator.get(arrUnit[2]);
+
+        return 6.67*java.lang.Math.pow(10,-11)*m1*m2/(r*r);
     }
 }
