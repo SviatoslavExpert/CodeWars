@@ -2,7 +2,7 @@ package com.granovskiy;
 
 public class Dinglemouse {
 
-    private static int ONE_HUNDRED = 100; // Declare this first!
+    private static int ONE_HUNDRED = 100; // This goes first
 
     public static final Dinglemouse INST = new Dinglemouse();
 
