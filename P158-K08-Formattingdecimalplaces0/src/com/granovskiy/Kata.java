@@ -5,5 +5,6 @@ public class Kata {
         String stringValue = String.format("%.2f", number);
         double result = Double.parseDouble(stringValue);
         return result;
+        //  return Double.parseDouble(String.format("%.2f", number));
     }
 }
