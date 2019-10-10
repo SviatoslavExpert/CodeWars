@@ -15,6 +15,8 @@ public class Kata {
         result = list.get(0).replace("", "***");
         result = result.substring(3, result.length() - 3);
         return result;
+        //        java.util.Arrays.sort(s);
+        //        return String.join("***",s[0].split(""));
     }
 
     public static void main(String[] args) {
