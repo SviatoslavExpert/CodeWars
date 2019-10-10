@@ -2,18 +2,17 @@ package com.granovskiy;
 
 public class Dinglemouse {
 
-    public static final Dinglemouse INST = new Dinglemouse();
+    private static int ONE_HUNDRED = 100; // Declare this first!
 
-    private static int ONE_HUNDRED = 100;
+    public static final Dinglemouse INST = new Dinglemouse();
 
     private final int value;
 
-    public Dinglemouse() {
+    private Dinglemouse() {
         value = ONE_HUNDRED;
     }
 
     public int plus100(int n) {
         return value + n;
     }
-
 }
